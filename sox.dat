@@ -1,0 +1,42 @@
+SoX
+- play
+- synth
+
+# example with bash
+$ /usr/bin/play -qn synth <length> [type] pluck <note> [repeat <amount>]
+
+#-----------------------------------------------------------------------------
+
+synth [−j KEY] [−n] [len [off [ph [p1 [p2 [p3]]]]]] {[type] [combine] [[%]freq[k][:|+|/|−[%]freq2[k]]] [off [ph [p1 [p2 [p3]]]]]}
+
+
+A detailed description of each synth parameter follows:
+
+len is the length of audio to synthesise (any time specification); a value of 0 indicated to use the input length, which is also the default.
+
+type is one of sine, square, triangle, sawtooth, trapezium, exp, [white]noise, tpdfnoise, pinknoise, brownnoise, pluck; default=sine.
+
+combine is one of create, mix, amod (amplitude modulation), fmod (frequency modulation); default=create.
+
+freq/freq2 are the frequencies at the beginning/end of synthesis in Hz or, if preceded with ‘%’, semitones relative to A (440 Hz); alternatively, ‘scientific’ note notation (e.g. E2) may be used. The default frequency is 440Hz. By default, the tuning used with the note notations is ‘equal temperament’; the −j KEY option selects ‘just intonation’, where KEY is an integer number of semitones relative to A (so for example, −9 or 3 selects the key of C), or a note in scientific notation.
+If freq2 is given, then len must also have been given and the generated tone will be swept between the given frequencies. The two given frequencies must be separated by one of the characters ‘:’, ‘+’, ‘/’, or ‘−’. This character is used to specify the sweep function as follows:
+:
+Linear: the tone will change by a fixed number of hertz per second.
++
+Square: a second-order function is used to change the tone.
+/
+Exponential: the tone will change by a fixed number of semitones per second.
+−
+Exponential: as ‘/’, but initial phase always zero, and stepped (less smooth) frequency changes.
+
+Not used for noise.
+
+off is the bias (DC-offset) of the signal in percent; default=0.
+
+ph is the phase shift in percentage of 1 cycle; default=0. Not used for noise.
+
+p1 is the percentage of each cycle that is ‘on’ (square), or ‘rising’ (triangle, exp, trapezium); default=50 (square, triangle, exp), default=10 (trapezium), or sustain (pluck); default=40.
+
+p2 (trapezium): the percentage through each cycle at which ‘falling’ begins; default=50. exp: the amplitude in multiples of 2dB; default=50, or tone-1 (pluck); default=20.
+
+p3 (trapezium): the percentage through each cycle at which ‘falling’ ends; default=60, or tone-2 (pluck); default=90.

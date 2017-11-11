@@ -1,0 +1,15 @@
+plans for the soxbox
+
+play <list notes || string saved_song>
+
+# save
+set string = <list notes>
+
+set time interval
+time <float>
+
+# make silent, kill running
+stop
+
+# make quiet and exit program
+quit
