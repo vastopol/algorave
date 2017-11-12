@@ -1,18 +1,28 @@
-plans for the soxbox
+SOXBOX
 
 uses semicolon as argument separator ';'
 ex.
-sox>> time 5; synth sawtooth; show;
+sox>> time 2; synth sawtooth; show; chord d e f#;
 
 #---------------------------------------
 
-play <list notes || string saved_song>
+# play a scale
+play <list notes || string saved>
+
+# play a chord
+chord <list notes || string saved>
 
 # save
-set string = <list notes>
+save string = <list notes>
 
-set time interval
+# set time interval
 time <float>
+
+# set repeat amount
+amount <int>
+
+# set synthesizer type
+synth <string>
 
 # make silent, kill running
 stop
