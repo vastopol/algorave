@@ -5,6 +5,8 @@ sox>> time 2; synth sawtooth; show; chord d e f#;
 
 #---------------------------------------
 
+a command line arg as a file will be read though and executed
+
 uses the semicolon as argument separator ';'
 
 # play a scale

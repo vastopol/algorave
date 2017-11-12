@@ -3,10 +3,9 @@
 # Modules
 import sox #??? not working properly
 import sys
-import subprocess
+import subprocess #??? not working properly
 import time
 import os
-import itertools
 #-------------------------------
 
 # Global Variables
@@ -18,7 +17,7 @@ amount = 1       # number of times selected part is played (user can change)
 dictate = {}     # dictionary to save notes
 #-------------------------------
 
-def main(argv):
+def main():
     global types,notes,synth,length,amount,dictate
     while True:
         listy = getargs()
@@ -144,5 +143,83 @@ def player(sound,option=0):
         os.system(sound + ' ' + '&')
 #---------------------------------
 
+def file_doer(file):
+    global types,notes,synth,length,amount,dictate
+    in_file = open(file,'r')
+    for line in in_file:
+        # print line
+        line2 = line.split(';')
+        line3 = []
+        line4 = []
+        for i in line2:
+            if len(i.strip()) != 0:
+                line3.append(i.strip())
+        for i in line3:
+            line4.append(i.split())
+        # print line4
+        for i in line4:
+            #print i[0]
+            if i[0] == 'save':
+                i.pop(0)
+                if len(i) < 2:
+                    print("ERR save format")
+                else:
+                    bop = i.pop(0)
+                    dictate[bop] = i
+            elif i[0] == 'scale':
+                if len(i) == 1:
+                    sox_play(None,0) # default
+                elif len(i) == 2:
+                    i.pop(0)
+                    temp = map(str.upper,dictate[i[0]])
+                    sox_play(temp,0) # default
+                else:
+                    i.pop(0)
+                    i = map(str.upper,i)
+                    sox_play(i,0)
+            elif i[0] == 'chord':
+                if len(i) == 1:
+                    sox_play(None,1) # default
+                elif len(i) == 2:
+                    i.pop(0)
+                    temp = map(str.upper,dictate[i[0]])
+                    sox_play(temp,1) # default
+                else:
+                    i.pop(0)
+                    i = map(str.upper,i)
+                    sox_play(i,1)
+            elif i[0] == 'time' and len(i) >1:
+                if float(i[1]) >= 0:
+                    length = float(i[1])
+                else:
+                    print("ERR time format: " + i[1])
+            elif i[0] == 'amount' and len(i) >1:
+                if int(i[1]) >= 1:
+                    amount = int(i[1])
+                else:
+                    print("ERR amount format: " + i[1])
+            elif i[0] == 'synth' and len(i) >1:
+                if i[1] in types:
+                    synth = i[1]
+                else:
+                    print("ERR unknown synth: " + i[1])
+            elif i[0] == 'show':
+                show()
+            elif i[0] == 'reset':
+                synth = types[1]
+                length = .1
+                amount = 1
+                dictate = {}
+            elif i[0] == 'stop':
+                silence()
+            elif i[0] == 'quit':
+                quit()
+            else:
+                print("ERR unknown argument: ", i)
+#---------------------------------
+
 if __name__ == '__main__':
-    main(sys.argv)
+    if len(sys.argv) == 1:
+        main()
+    else:
+        file_doer(sys.argv[1])

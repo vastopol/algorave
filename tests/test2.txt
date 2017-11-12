@@ -1,0 +1,68 @@
+save adom7 a c# e g;
+save bdom7 b d# f# a;
+save edom7 e g# b d;
+
+time 3;
+chord edom7;
+time .1;
+scale edom7;
+
+time 3;
+chord edom7;
+time .1;
+scale edom7;
+
+time 3;
+chord adom7;
+time .1;
+scale adom7;
+
+time 3;
+chord adom7;
+time .1;
+scale adom7;
+
+time 3;
+chord edom7;
+time .1;
+scale edom7;
+
+time 3;
+chord edom7;
+time .1;
+scale edom7;
+
+time 3;
+chord adom7;
+time .1;
+scale adom7;
+
+time 3;
+chord adom7;
+time .1;
+scale adom7;
+
+time 3;
+chord bdom7;
+time .1;
+scale bdom7;
+
+time 3;
+chord adom7;
+time .1;
+scale adom7;
+
+time 3;
+chord edom7;
+time .1;
+scale edom7;
+
+time 3;
+chord edom7;
+time .1;
+scale edom7;
+
+time 3;
+chord edom7;
+
+stop;
