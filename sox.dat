@@ -3,7 +3,7 @@ SoX
 - synth
 
 # example with bash
-$ /usr/bin/play -qn synth <length> [type] pluck <note> [repeat <amount>]
+$ play -qn synth <length> <type> <note> [repeat <amount>]
 
 #-----------------------------------------------------------------------------
 

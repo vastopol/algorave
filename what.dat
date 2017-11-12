@@ -1,5 +1,11 @@
 plans for the soxbox
 
+uses semicolon as argument separator ';'
+ex.
+sox>> time 5; synth sawtooth; show;
+
+#---------------------------------------
+
 play <list notes || string saved_song>
 
 # save
