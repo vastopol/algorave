@@ -1,0 +1,8 @@
+synth sawtooth;
+save long a d b c d a d a d g f e d f g c b c d c d c b g f d a d e d e d a d a d f d f d c d c d b c f d c d e d a d f e d e d a;
+
+scale long;
+scale long;
+scale long;
+scale long;
+

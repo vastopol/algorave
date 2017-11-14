@@ -1,7 +1,15 @@
-save dmaj d f# a; save cmaj c e g;
-time 5; chord dmaj;chord dmaj; time .1; scale cmaj; scale cmaj;
-time 5; chord dmaj;chord dmaj; time .1; scale cmaj; scale cmaj;
-time 5; chord dmaj;chord dmaj; time .1; scale cmaj; scale cmaj;
-time 5; chord dmaj;chord dmaj; time .1; scale cmaj; scale cmaj;
-time 5; chord dmaj;chord dmaj; time .1; scale cmaj; scale cmaj;
-time 5; chord dmaj;chord dmaj; time .1; scale cmaj; scale cmaj;
+save cmaj c e g;
+save dmaj d f# a; 
+
+time 5; chord dmaj; chord dmaj;
+time .1; scale cmaj; scale cmaj;
+
+time 5; chord dmaj; chord dmaj; 
+time .1; scale cmaj; scale cmaj;
+
+time 5; chord dmaj; chord dmaj; 
+time .1; scale cmaj; scale cmaj;
+
+time 5; chord dmaj; chord dmaj; 
+time .1; scale cmaj; scale cmaj;
+
