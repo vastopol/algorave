@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 # Modules
-import sox #??? not working properly
 import sys
 import subprocess #??? not working properly
 import time
