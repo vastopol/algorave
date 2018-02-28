@@ -1,0 +1,45 @@
+SOXBOX
+
+ex1.
+sox>> time 2; synth sawtooth; show; chord d e f#;
+
+---------------------------------------
+
+give any input files as command line arguments to the program
+files will be read though and executed
+
+uses the semicolon as argument separator ';'
+
+---------------------------------------
+
+Commands:
+
+* show current settings
+show
+
+* play a scale
+scale <list notes || string saved>
+
+* play a chord
+chord <list notes || string saved>
+
+* save
+save <string> = <list notes>
+
+* set time interval
+time <float>
+
+* set repeat amount
+amount <int>
+
+* set synthesizer type
+synth <string>
+
+* back to default
+reset
+
+* make silent, kill running
+stop
+
+* make quiet and exit program
+quit

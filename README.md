@@ -13,9 +13,16 @@ http://sox.sourceforge.net/sox.html
 
 https://linux.die.net/man/1/sox
 
----------
+---------------------------------------
 
-bugs?
+Plans:
+- convert source from python2.7 to python3
+- configure modules properly
+- add feature to generate an output file as mp3, wav, etc... ???
+
+---------------------------------------
+
+bugs ???
 
 try commands:
 
