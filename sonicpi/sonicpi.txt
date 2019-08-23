@@ -1,0 +1,6 @@
+
+https://github.com/samaaron/sonic-pi/blob/master/INSTALL-LINUX.md
+http://marianoguerra.org/posts/sonic-pi-on-ubuntu-1604.html
+
+https://projects.raspberrypi.org/en/projects/getting-started-with-sonic-pi/3
+

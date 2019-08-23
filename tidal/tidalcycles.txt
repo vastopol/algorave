@@ -1,0 +1,50 @@
+Tidal Cycles
+
+https://tidalcycles.org/index.php/Linux_installation
+
+----------
+
+need:
+
+* supercollider >= 3.7
+
+    https://github.com/lvm/build-supercollider
+
+    https://supercollider.github.io/development/quarks-repository-moved
+
+    https://github.com/supercollider/supercollider/blob/develop/README_LINUX.md
+    https://github.com/supercollider/supercollider/wiki/Installing-SuperCollider-on-Ubuntu-systems
+
+
+    the apt-get installed package is 3.6.6
+
+    must download make and install from source on github
+
+    could not get to work with qt
+    compile using cmake with out qt
+    cmake -DSC_QT=OFF .
+
+----------
+
+run:
+
+need to start the jackd server first
+
+    sudo jackd -d dummy
+
+then start sclang
+
+    sudo rlwrap sclang
+
+then start superdirt
+
+    SuperDirt.start
+
+
+----------
+
+https://toplap.org/tidal/
+https://slab.org/category/haskell/
+https://medium.com/potac/reusable-code-in-tidalcycles-59b7a4dba30a
+https://github.com/yaxu/tidal-workshop
+https://github.com/pd3v/Tidalcycles-Workshop

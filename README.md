@@ -1,41 +1,22 @@
-# soxbox
-command line synthesizer project
+# algorave
 
-* dependencies
-  * sox - cross-platform audio editing software (version 14.4.2)
+live coding music projects
 
-To install SoX on Linux:
-apt-get install sox
+## Tools
 
-this project uses python 2.7 for now.
+* SoX
+* Tidal Cycles
+* Haskore
+* Sonic Pi
 
-http://sox.sourceforge.net/sox.html
+can't get tidal or sonic pi to work on ubuntu yet.
+both are installed but can't generate sound.
 
-https://linux.die.net/man/1/sox
+## Papers
 
----------------------------------------
+* Laurie Spiegel - Manipulations of Musical Patterns
+http://retiary.org/ls/writings/musical_manip.html
 
-Plans:
-- convert source from python2.7 to python3
-- configure modules properly
-- add feature to generate an output file as mp3, wav, etc... ???
+* Xenakis Iannis - Formalized Music: Thought and Mathematics in Composition
+https://monoskop.org/images/7/74/Xenakis_Iannis_Formalized_Music_Thought_and_Mathematics_in_Composition.pdf
 
----------------------------------------
-
-bugs ???
-
-try commands:
-
-Fails:
-chord c
-chord c;
-
-scale c
-scale c;
-
-Pass:
-chord c c;
-chord c c
-
-scale c c;
-scale c c
